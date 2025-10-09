@@ -190,7 +190,7 @@
     function btnAClick(e){
         //2.2 開始ボタンの処理(ButtonA)
         active = true;
-        startTime = new Data();
+        startTime = new Date();
         
     }
 
@@ -216,6 +216,14 @@
  
     // 繰り返し実行する処理
     function timer(){  
+        //2.5 タイマーの処理
+        if(active){
+            etime = parseInt( (new Date() - startTime) / 1000 );
+            rest = period - etime;
+            $("#time").html("経過時間： " + etime);
+            $("#remain").html("残り時間： " + rest);
+            analog(rest);
+        }
         
         
     } 
