@@ -203,7 +203,7 @@
 
     // ButtonCがクリックされた時の処理
     function btnCClick(e){
-        alarm();
+        //alarm();
 
         //2.4 設定ボタンの処理(ButtonC)
         active = false;
@@ -223,6 +223,12 @@
             $("#time").html("経過時間： " + etime);
             $("#remain").html("残り時間： " + rest);
             analog(rest);
+
+            //2.6 タイマーの終了の処理
+            if(rest <= 0){
+                active = false;
+                alarm();
+            }
         }
         
         
