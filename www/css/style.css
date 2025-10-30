@@ -24,6 +24,13 @@
         left:10px; right:10px;
         font-weight: bold;
     }
+
+    #switching-name{
+        font-family: cursive;
+        font-size: 30px;
+        position: absolute;
+        top:650px; 
+    }
     
     #time::after {
         color: #ff0000;
