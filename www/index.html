@@ -163,6 +163,8 @@
     var rest = 0;
     var etime = 0;
 
+    //2.2 切り替えタイマーの種類変更に使用する変数
+    var count = 0;
     
     // ボタンの初期設定
     function init(){
@@ -220,7 +222,18 @@
 
     // ButtonDがクリックされた時の処理
     function btnDClick(e){
-        $("#switching-name").html("aaa");
+        switch(count){
+            case 0:
+                $("#switching-name").html("aaa");
+                count++;
+                break;
+            case 1:
+                $("#switching-name").html("bbb");
+                count = 0;
+                break;
+            default:
+                break;
+        }
     }
     
  
