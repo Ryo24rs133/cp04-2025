@@ -224,11 +224,15 @@
     function btnDClick(e){
         switch(count){
             case 0:
-                $("#switching-name").html("aaa");
+                $("#switching-name").html("問題解答時間1");
+                minute.value = 3;
+                second.value = 0;
                 count++;
                 break;
             case 1:
-                $("#switching-name").html("bbb");
+                $("#switching-name").html("問題解答時間2");
+                minute.value = 5;
+                second.value = 0;
                 count = 0;
                 break;
             default:
